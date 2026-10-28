@@ -3,125 +3,148 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Astha Soni | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Astha Soni | Biotechnology, Bioinformatics and Research Portfolio">
+<title>Astha Soni | Research Portfolio</title>
+
 <style>
 :root{
-  --bg:#080b16;--panel:#11182a;--text:#f5f7ff;
-  --muted:#a6b0c8;--cyan:#72e5ef;--purple:#a58bff;
+  --navy:#183b56;
+  --blue:#3478a8;
+  --pale:#eaf3fb;
+  --lavender:#f1effb;
+  --bg:#f8fafc;
+  --white:#ffffff;
+  --text:#263746;
+  --muted:#647587;
+  --border:#dce6ef;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
+html{scroll-behavior:smooth;scroll-padding-top:95px}
 body{
-  background:var(--bg);color:var(--text);
-  font-family:Arial,sans-serif;line-height:1.7
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.75
 }
 a{color:inherit;text-decoration:none}
-.wrap{width:88%;max-width:1100px;margin:auto}
+.container{width:88%;max-width:1080px;margin:auto}
 header{
-  position:sticky;top:0;z-index:10;
-  background:rgba(8,11,22,.94);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid #252e43
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid var(--border)
 }
 .nav{
-  display:flex;align-items:center;justify-content:space-between;
-  gap:20px;min-height:72px;padding:12px 0
+  min-height:74px;display:flex;justify-content:space-between;
+  align-items:center;gap:20px;padding:14px 0
 }
-.logo{font-size:24px;font-weight:800}
-.logo span{color:var(--cyan)}
-nav{display:flex;gap:18px;flex-wrap:wrap}
-nav a{font-size:13px;color:var(--muted)}
-nav a:hover{color:var(--cyan)}
+.logo{font-size:25px;font-weight:800;color:var(--navy)}
+.logo span{color:var(--blue)}
+nav{display:flex;flex-wrap:wrap;gap:17px}
+nav a{font-size:12px;color:var(--muted)}
+nav a:hover{color:var(--blue)}
 .hero{
-  min-height:83vh;display:flex;align-items:center;
-  padding:80px 0;position:relative;overflow:hidden
+  background:linear-gradient(120deg,#fff 55%,#edf5fc);
+  padding:95px 0 75px;border-bottom:1px solid var(--border)
 }
-.hero:before{
-  content:"";position:absolute;width:300px;height:300px;
-  right:-80px;top:90px;background:#624cff;
-  opacity:.25;filter:blur(130px);pointer-events:none
+.eyebrow,.section-label{
+  color:var(--blue);text-transform:uppercase;
+  letter-spacing:2px;font-size:11px;font-weight:700
 }
-.eyebrow{
-  color:var(--cyan);letter-spacing:3px;
-  text-transform:uppercase;font-size:11px;margin-bottom:20px
+h1{
+  color:var(--navy);font-size:clamp(44px,8vw,72px);
+  line-height:1.15;letter-spacing:-2px;margin:14px 0
 }
-h1{font-size:clamp(43px,9vw,82px);line-height:1.1;
-  letter-spacing:-2px;margin-bottom:22px}
-.gradient{
-  background:linear-gradient(100deg,var(--cyan),var(--purple));
-  -webkit-background-clip:text;background-clip:text;color:transparent
+.hero h2{
+  color:#526b80;font-size:clamp(18px,3vw,23px);
+  font-weight:500;line-height:1.5;margin-bottom:18px
 }
-.intro{max-width:650px;color:var(--muted);font-size:17px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.description{color:var(--muted);max-width:700px;font-size:15px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
 .btn{
-  display:inline-block;border:1px solid #36415b;
-  padding:12px 19px;border-radius:8px;font-size:13px;
-  font-weight:bold;transition:.25s
+  display:inline-block;padding:11px 18px;border-radius:6px;
+  border:1px solid #c9dbea;color:var(--navy);
+  font-size:13px;font-weight:700;transition:.2s
 }
-.btn:hover{transform:translateY(-3px);border-color:var(--cyan)}
-.primary{background:linear-gradient(100deg,var(--cyan),var(--purple));
-  color:#090d19;border:0}
-.meta{font-size:11px;color:var(--muted);margin-top:26px;letter-spacing:1px}
-section{padding:78px 0}
-.label{font-size:11px;letter-spacing:3px;color:var(--cyan)}
-h2{font-size:clamp(29px,5vw,42px);line-height:1.2;margin:12px 0 17px}
-.sub{color:var(--muted);max-width:700px;margin-bottom:28px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.projects{grid-template-columns:repeat(3,minmax(0,1fr))}
+.btn:hover{background:var(--pale);transform:translateY(-2px)}
+.btn.primary{background:var(--navy);border-color:var(--navy);color:white}
+.btn.primary:hover{background:var(--blue)}
+.stats{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:13px;margin-top:32px;max-width:650px
+}
+.stat{padding:15px;background:white;border:1px solid var(--border);border-radius:8px}
+.stat strong{display:block;color:var(--navy);font-size:23px}
+.stat span{font-size:11px;color:var(--muted)}
+section{padding:72px 0}
+.section-title{
+  color:var(--navy);font-size:clamp(29px,5vw,39px);
+  line-height:1.3;margin:9px 0 14px
+}
+.section-intro{color:var(--muted);max-width:740px;font-size:14px;margin-bottom:27px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
 .card{
-  background:linear-gradient(145deg,#151e33,#101526);
-  border:1px solid #29334b;border-radius:15px;padding:24px;
-  transition:transform .25s,border-color .25s
+  background:white;border:1px solid var(--border);
+  border-radius:10px;padding:22px;
+  transition:transform .2s,border-color .2s
 }
-.card:hover{transform:translateY(-5px);border-color:#72e5ef88}
-.icon{font-size:27px;margin-bottom:12px}
-.card h3{font-size:18px;margin-bottom:10px}
-.card p{font-size:14px;color:var(--muted)}
-.num{font-size:11px;color:var(--cyan);letter-spacing:2px;margin-bottom:13px}
-.tag{display:inline-block;color:var(--cyan);font-size:11px;margin-top:15px}
-.skills{display:flex;flex-wrap:wrap;gap:10px}
-.skill{
-  border:1px solid #2c3851;background:var(--panel);
-  padding:8px 12px;border-radius:7px;font-size:12px;color:#dce5ff
+.card:hover{border-color:#a9c9e1;transform:translateY(-3px)}
+.card h3{color:var(--navy);font-size:17px;line-height:1.5;margin:9px 0}
+.card p{color:var(--muted);font-size:13px}
+.number{color:var(--blue);font-size:11px;font-weight:700;letter-spacing:1px}
+.subheading{color:var(--navy);font-size:19px;margin:25px 0 13px}
+.pill-list{display:flex;flex-wrap:wrap;gap:9px}
+.pill{
+  display:inline-block;padding:7px 11px;background:var(--pale);
+  border:1px solid #d9e8f5;color:#285b80;border-radius:5px;font-size:12px
 }
-.contact{
-  padding:clamp(24px,5vw,48px);border-radius:18px;
-  border:1px solid #29334b;
-  background:radial-gradient(ellipse at top right,#2b3159,transparent 65%),var(--panel)
+.timeline{border-left:2px solid #cddfec;margin-left:8px;padding-left:22px}
+.timeline-item{
+  position:relative;background:white;border:1px solid var(--border);
+  border-radius:9px;padding:19px;margin-bottom:18px
 }
-footer{padding:28px 0;text-align:center;color:var(--muted);
-  border-top:1px solid #252e43;font-size:12px}
-.reveal{animation:rise .8s ease both}
-@keyframes rise{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:translateY(0)}
+.timeline-item:before{
+  content:"";width:10px;height:10px;background:var(--blue);
+  border-radius:50%;position:absolute;left:-29px;top:26px
+}
+.timeline-item h3{color:var(--navy);font-size:16px}
+.timeline-item p{color:var(--muted);font-size:13px;margin-top:7px}
+.date{color:var(--blue);font-size:11px;font-weight:700;letter-spacing:.5px}
+.contact-box{
+  background:linear-gradient(120deg,#fff,#f1f5fc);
+  border:1px solid var(--border);border-radius:12px;padding:clamp(24px,5vw,42px)
+}
+footer{
+  background:white;border-top:1px solid var(--border);
+  text-align:center;color:var(--muted);font-size:12px;padding:24px 0
 }
 @media(max-width:700px){
-  .nav{flex-direction:column;align-items:flex-start;gap:9px}
-  nav{gap:12px}nav a{font-size:12px}
-  .hero{min-height:72vh;padding:65px 0}
-  .intro{font-size:15px}
-  section{padding:60px 0}
-  .grid,.projects{grid-template-columns:1fr}
-  .contact{padding:24px}
+  .nav{align-items:flex-start;flex-direction:column;gap:9px}
+  nav{gap:12px}
+  nav a{font-size:11px}
+  .hero{padding:68px 0}
+  section{padding:55px 0}
+  .grid{grid-template-columns:1fr}
+  .stats{gap:8px}
+  .stat{padding:10px}
+  .stat strong{font-size:19px}
 }
 @media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
 </style>
 </head>
-<body>
 
+<body>
 <header>
-  <div class="wrap nav">
-    <a href="#home" class="logo">Astha<span>.</span></a>
-    <nav>
-      <a href="#home">Home</a>
+  <div class="container nav">
+    <a class="logo" href="#home">AS<span>.</span></a>
+    <nav aria-label="Main navigation">
       <a href="#about">About</a>
+      <a href="#education">Education</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
+      <a href="#certifications">Certificates</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -129,125 +152,251 @@ footer{padding:28px 0;text-align:center;color:var(--muted);
 
 <main>
 <section class="hero" id="home">
-  <div class="wrap reveal">
+  <div class="container">
     <p class="eyebrow">Biotechnology · Bioinformatics · Research</p>
-    <h1>Hi, I'm<br><span class="gradient">Astha Soni.</span></h1>
-    <p class="intro">
-      Biotechnology Engineering student passionate about genetics,
-      bioinformatics, forensic science and scientific research.
+    <h1>Astha Soni</h1>
+    <h2>Biotechnology Engineering Student &amp; Aspiring Researcher</h2>
+    <p class="description">
+      Exploring molecular biology, computational genomics, forensic
+      science and AI-driven solutions. Interested in connecting
+      laboratory science with computational approaches to investigate
+      meaningful biological questions.
     </p>
     <div class="actions">
-      <a class="btn primary" href="#projects">Explore My Work ↗</a>
-      <a class="btn" href="#about">Discover My Story</a>
+      <a class="btn primary" href="#projects">Explore My Projects</a>
+      <a class="btn" href="#contact">Connect With Me</a>
     </div>
-    <p class="meta">CURIOUS MIND · SCIENCE-DRIVEN · ALWAYS LEARNING</p>
+    <div class="stats">
+      <div class="stat"><strong>7.91</strong><span>CGPA</span></div>
+      <div class="stat"><strong>2028</strong><span>Expected Graduation</span></div>
+      <div class="stat"><strong>BE</strong><span>Biotechnology</span></div>
+    </div>
   </div>
 </section>
 
 <section id="about">
-  <div class="wrap">
-    <p class="label">01 / ABOUT ME</p>
-    <h2>Science meets curiosity.</h2>
-    <p class="sub">
-      I am a Biotechnology Engineering student exploring biological
-      systems through laboratory techniques, computational biology
-      and research. My interests include genetics, molecular biology
-      and forensic applications.
+  <div class="container">
+    <p class="section-label">01 / About</p>
+    <h2 class="section-title">A scientific mind, driven by curiosity.</h2>
+    <p class="section-intro">
+      I am pursuing a Bachelor of Engineering in Biotechnology and
+      Food Technology at Chandigarh University. My interests include
+      molecular biology, cancer biotechnology, computational genomics,
+      forensic science and data-driven biological research.
     </p>
     <div class="grid">
       <article class="card">
-        <div class="icon">🧬</div>
-        <h3>My Interests</h3>
-        <p>Genetics, immunology, molecular biology, bioinformatics and forensic biotechnology.</p>
+        <h3>Molecular &amp; Cellular Biology</h3>
+        <p>Exploring DNA, proteins, genetics, immunology and cellular processes through academic learning and laboratory practice.</p>
       </article>
       <article class="card">
-        <div class="icon">🔬</div>
-        <h3>My Approach</h3>
-        <p>Combining scientific curiosity, hands-on learning and computational tools to explore biological questions.</p>
+        <h3>Computational Biology</h3>
+        <p>Using Python and bioinformatics tools to study biological sequences, protein properties and genomic questions.</p>
+      </article>
+      <article class="card">
+        <h3>Forensic Science</h3>
+        <p>Interested in DNA fingerprinting, molecular evidence and biotechnology applications in forensic investigation.</p>
+      </article>
+      <article class="card">
+        <h3>Research &amp; Innovation</h3>
+        <p>Exploring sustainable biotechnology, health-related research and AI-supported approaches to practical problems.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <p class="section-label">02 / Education</p>
+    <h2 class="section-title">Academic background.</h2>
+    <div class="timeline">
+      <article class="timeline-item">
+        <span class="date">JUNE 2024 – JULY 2028</span>
+        <h3>Chandigarh University</h3>
+        <p>Bachelor of Engineering — Biotechnology and Food Technology</p>
+        <p><strong>CGPA: 7.91</strong></p>
+        <p>Academic interests include biotechnology, bioinformatics, molecular biology and biopharmaceutical sciences.</p>
+        <p>Activities include BioInnovators Club, AutoCAD Club, C-Square Club, departmental activities and badminton.</p>
       </article>
     </div>
   </div>
 </section>
 
 <section id="skills">
-  <div class="wrap">
-    <p class="label">02 / SKILLS</p>
-    <h2>Tools of my trade.</h2>
-    <p class="sub">Laboratory techniques and bioinformatics tools I have studied or practised.</p>
-    <div class="skills">
-      <span class="skill">DNA Isolation</span>
-      <span class="skill">PCR</span>
-      <span class="skill">Gel Electrophoresis</span>
-      <span class="skill">SDS-PAGE</span>
-      <span class="skill">Microbiology</span>
-      <span class="skill">BLAST</span>
-      <span class="skill">NCBI</span>
-      <span class="skill">Clustal Omega</span>
-      <span class="skill">Protein Analysis</span>
-      <span class="skill">Python</span>
-      <span class="skill">Data Science</span>
+  <div class="container">
+    <p class="section-label">03 / Technical Skills</p>
+    <h2 class="section-title">Skills &amp; expertise.</h2>
+    <p class="section-intro">Techniques and tools studied or practised through academic work and training.</p>
+
+    <h3 class="subheading">Laboratory &amp; Molecular Biology</h3>
+    <div class="pill-list">
+      <span class="pill">DNA Isolation</span>
+      <span class="pill">RNA Isolation</span>
+      <span class="pill">PCR</span>
+      <span class="pill">Agarose Gel Electrophoresis</span>
+      <span class="pill">SDS-PAGE</span>
+      <span class="pill">Western Blotting</span>
+      <span class="pill">UV–Vis Spectrophotometry</span>
+      <span class="pill">Microbiology</span>
+      <span class="pill">Aseptic Techniques</span>
+      <span class="pill">Protein Estimation</span>
+      <span class="pill">Hemocytometer</span>
+      <span class="pill">Autoclave</span>
+    </div>
+
+    <h3 class="subheading">Bioinformatics &amp; Computational Biology</h3>
+    <div class="pill-list">
+      <span class="pill">NCBI</span>
+      <span class="pill">GenBank</span>
+      <span class="pill">BLASTn / BLASTp</span>
+      <span class="pill">Clustal Omega</span>
+      <span class="pill">MUSCLE</span>
+      <span class="pill">Primer3</span>
+      <span class="pill">SWISS-MODEL</span>
+      <span class="pill">ProtParam</span>
+      <span class="pill">PDB</span>
+      <span class="pill">Phylogenetic Analysis</span>
+    </div>
+
+    <h3 class="subheading">Programming &amp; Data</h3>
+    <div class="pill-list">
+      <span class="pill">Python</span>
+      <span class="pill">Data Science</span>
+      <span class="pill">AI/ML Fundamentals</span>
+      <span class="pill">Sequence Analysis</span>
+      <span class="pill">Scientific Research</span>
     </div>
   </div>
 </section>
 
 <section id="projects">
-  <div class="wrap">
-    <p class="label">03 / SELECTED WORK</p>
-    <h2>Projects & research.</h2>
-    <p class="sub">Selected topics from my academic journey.</p>
-    <div class="grid projects">
+  <div class="container">
+    <p class="section-label">04 / Selected Work</p>
+    <h2 class="section-title">Projects &amp; research.</h2>
+    <p class="section-intro">Selected academic and interdisciplinary projects.</p>
+    <div class="grid">
       <article class="card">
-        <p class="num">PROJECT 01</p>
-        <h3>Calcium Homeostasis During Pregnancy</h3>
-        <p>Research paper exploring the potential role of mesenchymal stem cells in calcium homeostasis during pregnancy.</p>
-        <span class="tag">STEM CELL RESEARCH</span>
+        <p class="number">PROJECT 01 · BIOTECHNOLOGY</p>
+        <h3>Effect of Mesenchymal Stem Cells on Improving Calcium Homeostasis During Pregnancy</h3>
+        <p>Research-based project exploring the potential role of mesenchymal stem cells in calcium regulation and maternal-fetal health.</p>
       </article>
       <article class="card">
-        <p class="num">PROJECT 02</p>
-        <h3>Sustainable Exopolysaccharides</h3>
-        <p>Academic project on exopolysaccharide production using jackfruit peel hydrolysate and Bacillus pumilus.</p>
-        <span class="tag">SUSTAINABLE BIOTECH</span>
+        <p class="number">PROJECT 02 · PSYCHOLOGY</p>
+        <h3>Boredom to Bliss</h3>
+        <p>Science of Happiness project exploring the relationship between boredom, creativity, engagement and personal well-being.</p>
       </article>
       <article class="card">
-        <p class="num">PROJECT 03</p>
-        <h3>Forensic Biotechnology</h3>
-        <p>Exploring DNA fingerprinting and molecular methods used in forensic science.</p>
-        <span class="tag">DNA & FORENSICS</span>
+        <p class="number">PROJECT 03 · ARTIFICIAL INTELLIGENCE</p>
+        <h3>AI-Based Early Food Spoilage Detection System</h3>
+        <p>A concept-based project exploring image analysis and machine learning for identifying early signs of food spoilage.</p>
+      </article>
+      <article class="card">
+        <p class="number">PROJECT 04 · CAREER TECHNOLOGY</p>
+        <h3>NextStep AI — Smart Career &amp; Opportunity Guidance</h3>
+        <p>An AI-based career-guidance concept designed to connect student interests and skills with relevant opportunities.</p>
+      </article>
+      <article class="card">
+        <p class="number">PROJECT 05 · SUSTAINABILITY</p>
+        <h3>Exopolysaccharides from Jackfruit Peel Hydrolysate</h3>
+        <p>Academic project exploring sustainable exopolysaccharide production using jackfruit peel hydrolysate and Bacillus pumilus.</p>
+      </article>
+      <article class="card">
+        <p class="number">PROJECT 06 · FORENSICS</p>
+        <h3>Forensic Case Study &amp; DNA Fingerprinting</h3>
+        <p>Academic exploration of forensic case analysis, DNA fingerprinting and molecular methods used in forensic science.</p>
+      </article>
+      <article class="card">
+        <p class="number">PROJECT 07 · BIOTECHNOLOGY</p>
+        <h3>Nanobentonite and Its Biotechnological Applications</h3>
+        <p>A review project exploring nanobentonite and its potential applications in biotechnology.</p>
       </article>
     </div>
   </div>
 </section>
 
 <section id="experience">
-  <div class="wrap">
-    <p class="label">04 / EXPERIENCE</p>
-    <h2>Training & development.</h2>
-    <div class="grid">
-      <article class="card">
-        <div class="icon">☢️</div>
-        <h3>Environmental Surveillance</h3>
-        <p>Industrial training exposure to environmental sampling and radioactivity monitoring at BARC-RAPS.</p>
+  <div class="container">
+    <p class="section-label">05 / Experience</p>
+    <h2 class="section-title">Training &amp; professional development.</h2>
+    <div class="timeline">
+      <article class="timeline-item">
+        <span class="date">JUNE – JULY 2026</span>
+        <h3>Forensic Laboratory Intern — Orbit Biotech</h3>
+        <p>Completed Module F: Forensic Science and DNA Fingerprinting, with exposure to forensic biotechnology concepts and laboratory methods.</p>
       </article>
-      <article class="card">
-        <div class="icon">💻</div>
-        <h3>Bioinformatics & Python</h3>
-        <p>Training and coursework in sequence analysis, computational biology and Python fundamentals.</p>
+      <article class="timeline-item">
+        <span class="date">MAY – JUNE 2026</span>
+        <h3>Vocational Training — NPCIL, RAPS</h3>
+        <p>Training exposure to industrial working environments, sampling practices and nuclear power station operations.</p>
+      </article>
+      <article class="timeline-item">
+        <span class="date">ENVIRONMENTAL SURVEILLANCE</span>
+        <h3>Environmental Survey Laboratory — BARC</h3>
+        <p>Exposure to environmental surveillance, sampling strategies and radiological monitoring concepts.</p>
+      </article>
+      <article class="timeline-item">
+        <span class="date">BIOINFORMATICS TRAINING</span>
+        <h3>Sequence Analysis &amp; Protein Modelling</h3>
+        <p>Training in sequence alignment, phylogenetic analysis and introductory protein modelling tools.</p>
+      </article>
+      <article class="timeline-item">
+        <span class="date">ACADEMIC LABORATORY EXPERIENCE</span>
+        <h3>Biotechnology Laboratory Training</h3>
+        <p>Practical learning in molecular biology, microbiology, electrophoresis, DNA isolation and spectrophotometry.</p>
       </article>
     </div>
   </div>
 </section>
 
+<section id="certifications">
+  <div class="container">
+    <p class="section-label">06 / Certifications</p>
+    <h2 class="section-title">Continuous learning.</h2>
+    <p class="section-intro">Selected training areas from my academic and professional development.</p>
+    <div class="grid">
+      <article class="card">
+        <h3>Python &amp; Data Science</h3>
+        <p>Python programming and IBM Python for Data Science and AI Development.</p>
+      </article>
+      <article class="card">
+        <h3>Forensic Biotechnology</h3>
+        <p>Forensic science, DNA fingerprinting and related bioinformatics training.</p>
+      </article>
+      <article class="card">
+        <h3>Bioinformatics</h3>
+        <p>Sequence alignment, phylogenetic analysis and protein modelling tools.</p>
+      </article>
+      <article class="card">
+        <h3>Environmental Training</h3>
+        <p>Environmental surveillance and radioactivity monitoring exposure.</p>
+      </article>
+    </div>
+    <p class="section-intro" style="margin-top:18px">
+      Individual certificate names and verification links can be added as needed.
+    </p>
+  </div>
+</section>
+
 <section id="contact">
-  <div class="wrap">
-    <div class="contact">
-      <p class="label">05 / CONTACT</p>
-      <h2>Let's connect.</h2>
-      <p class="sub">
-        Interested in biotechnology, scientific research and collaboration?
-        Connect with me professionally.
+  <div class="container">
+    <div class="contact-box">
+      <p class="section-label">07 / Contact</p>
+      <h2 class="section-title">Let's connect professionally.</h2>
+      <p class="section-intro">
+        Interested in biotechnology, bioinformatics, scientific research
+        or collaboration? Connect with me through my social profiles.
       </p>
       <div class="actions">
-        <a class="btn primary" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a class="btn primary"
+           href="https://www.linkedin.com/in/iasthasoni/"
+           target="_blank" rel="noopener noreferrer">
+          LinkedIn Profile ↗
+        </a>
+        <a class="btn"
+           href="https://www.facebook.com/share/1CR7RdRq1f/?mibextid=wwXIfr"
+           target="_blank" rel="noopener noreferrer">
+          Facebook Profile ↗
+        </a>
         <a class="btn" href="#home">Back to top ↑</a>
       </div>
     </div>
@@ -255,6 +404,8 @@ footer{padding:28px 0;text-align:center;color:var(--muted);
 </section>
 </main>
 
-<footer>© 2026 Astha Soni · Personal Portfolio</footer>
+<footer>
+  © 2026 Astha Soni · Academic &amp; Research Portfolio
+</footer>
 </body>
 </html>
